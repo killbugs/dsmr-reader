@@ -59,8 +59,6 @@ def export():
     data = {
         'd': consumption_timestamp.date().strftime('%Y%m%d'),
         't': consumption_timestamp.time().strftime('%H:%M'),
-        'v1': int(day_consumption['electricity_returned_merged'] * 1000),  # Energy Generation (Wh)
-        'v2': int(latest_consumption.currently_returned * 1000),  # Power Generation (W)
         'v3': int(day_consumption['electricity_merged'] * 1000),  # Energy Consumption (Wh)
         'v4': int(latest_consumption.currently_delivered * 1000),  # Power Consumption (W)
         'n': 1,  # Net Flag, always enabled for smart meters
